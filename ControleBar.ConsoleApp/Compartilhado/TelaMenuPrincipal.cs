@@ -24,17 +24,17 @@ namespace ControleBar.ConsoleApp.Compartilhado
         private readonly IRepositorio<Mesa> repositorioMesa;
         private readonly TelaCadastroMesa telaCadastroMesa;
 
-        
+
         public TelaMenuPrincipal(Notificador notificador)
         {
             repositorioGarcom = new RepositorioGarcom();
             telaCadastroGarcom = new TelaCadastroGarcom(repositorioGarcom, notificador);
 
             repositorioConta = new RepositorioConta();
-           // telaCadastroConta = new TelaCadastroConta(repositorioConta, notificador);
+            // telaCadastroConta = new TelaCadastroConta(repositorioConta, notificador);
 
             repositorioPedido = new RepositorioPedido();
-           // telaCadastroPedido = new TelaCadastroPedido(repositorioPedido, notificador);
+            telaCadastroPedido = new TelaCadastroPedido(repositorioPedido, notificador);
 
             repositorioEstoque = new RepositorioEstoque();
             telaCadastroEstoque = new TelaCadastroEstoque(repositorioEstoque, notificador);
@@ -77,10 +77,10 @@ namespace ControleBar.ConsoleApp.Compartilhado
                 tela = telaCadastroGarcom;
 
             //else if (opcao == "2")
-               // tela = telaCadastroConta;
+            // tela = telaCadastroConta;
 
-           // else if (opcao == "3")
-              //  tela = telaCadastroPedido;
+            else if (opcao == "3")
+                tela = telaCadastroPedido;
 
             else if (opcao == "4")
                 tela = telaCadastroEstoque;

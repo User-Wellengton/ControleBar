@@ -51,7 +51,7 @@ namespace ControleBar.ConsoleApp.ModuloConta
             return "Id: " + id + Environment.NewLine +
                 "Pedido: " + Environment.NewLine +
                 "Mesa: " + mesa.NumeroDaMesa + Environment.NewLine +
-                "Produtos: " + estoque.produto + " - " + estoque.quantidade + Environment.NewLine;
+                "Produtos: " + estoque.Produto + " - " + estoque.Quantidade + Environment.NewLine;
         }
 
 
